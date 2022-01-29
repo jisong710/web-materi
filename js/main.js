@@ -67,7 +67,7 @@ $(window).on('load', function() {
 		TYPED JS
 	--------------------*/
 	$(".element").typed({
-		strings: ["fisika itu mudah", "materi tentang Usaha dan Energi", "By. Rohimatul Husniyah"],
+		strings: ["fisika itu mudah", "materi tentang Usaha dan Energi", "By. Rohmatul Husniyah"],
 		typeSpeed: 10,
 		loop:true,
 		backDelay: 2000
