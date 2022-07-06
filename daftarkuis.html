@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/animate.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;}
+
+		/* The Modal (background) */
+		.modal {
+		  display: none; /* Hidden by default */
+		  position: fixed; /* Stay in place */
+		  z-index: 1; /* Sit on top */
+		  padding-top: 100px; /* Location of the box */
+		  left: 0;
+		  top: 0;
+		  width: 100%; /* Full width */
+		  height: 100%; /* Full height */
+		  overflow: auto; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+
+		/* Modal Content */
+		.modal-content {
+		  background-color: #fefefe;
+		  margin: auto;
+		  padding: 20px;
+		  border: 1px solid #888;
+		  width: 80%;
+		}
+
+		/* The Close Button */
+		.close {
+		  color: #aaaaaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		  color: #000;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+		</style>
+</head>
+<body style="background-image:url('img/bg.jpg');
+background-size:cover">
+    <header class="header-section">
+		<div class="logo">
+			<a href="index.html"><img src="img/logo.png" alt=""></a><!-- Logo -->
+		</div>
+		<div class="responsive"><i class="fa fa-bars"></i></div>
+		<!-- Navigation -->
+		<ul class="menu-list">
+			<li><a href="#contact" style="color: black;">Contact</a></li>
+		</ul>
+	</header>
+    <section class="portfolio-section fix" id="portfolio">
+        <div id="round"></div>
+        <div class="container pt100 pb100">
+            <div class="stitle mb40">
+                <h2>Daftar Materi</h2>
+            </div>
+            <div class="row isotope">
+                <!-- Work item -->	
+                <div class="col-md-4 col-sm-6 col-xs-12 ill">
+                    <a class="work-item" id ="myBtn">
+                        <img src="img/works/1.png" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>Usaha</h2>
+                                <h3>lihat pertanyaan</h3>
+                            </div>	
+                        </div>
+                    </a>
+                </div>
+                <!-- Work item -->	
+                <div class="col-md-4 col-sm-6 col-xs-12 brand">
+                    <a class="work-item" id ="myBtn2">
+                        <img src="img/works/2.webp" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>daya dan energi</h2>
+                                <h3>lihat pertanyaan</h3>
+                            </div>	
+                        </div>
+                    </a>
+                </div>
+                <!-- Work item -->	
+                <div class="col-md-4 col-sm-6 col-xs-12 fs">
+                    <a class="work-item" id ="myBtn3">
+                        <img src="img/works/3.jpg" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>hukum kekekalan energi</h2>
+                                <h3>lihat pertanyaan</h3>
+                            </div>	
+                        </div>
+                    </a>
+                </div>
+                <!-- Work item -->	
+               
+            </div>
+        </div>
+    </section>
+		<div id="myModal" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <p>Some text in the Modal..</p>
+		  </div>
+
+		</div>
+
+		<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    modal.style.display = "none";
+		  }
+		}
+		</script>
+		<div id="myModal2" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <p>Some text in the Modal..</p>
+		  </div>
+
+		</div>
+
+		<script>
+		// Get the modal
+		var modal = document.getElementById("myModal2");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn2");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    modal.style.display = "none";
+		  }
+		}
+		</script>
+			<div id="myModal3" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <p>Some text in the Modal..</p>
+		  </div>
+
+		</div>
+
+		<script>
+		// Get the modal
+		var modal = document.getElementById("myModal3");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn3");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    modal.style.display = "none";
+		  }
+		}
+		</script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/plugin.js"></script>
+	<script src="js/init-round.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
