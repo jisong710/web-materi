@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+	    <script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/plugin.js"></script>
+	<script src="js/init-round.js"></script>
+	<script src="js/main.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+  	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" href="css/magnific-popup.css"/>
@@ -53,6 +60,169 @@
 		  cursor: pointer;
 		}
 		</style>
+	<script src="js/flipbook.min.js"></script>
+	<script type="text/javascript">
+	
+      $(document).ready(function () {
+          $("#myBtn").flipBook({
+            //Layout Setting
+            pdfUrl:'Blue simple clean easy science classroom poster.pdf',
+            lightBox:true,
+            layout:3,
+            currentPage:{vAlign:"bottom", hAlign:"left"},
+            // BTN SETTING
+            btnShare : {enabled:false},
+            btnPrint : {
+              hideOnMobile:true
+            },
+            btnDownloadPages : {
+              enabled: true,
+              title: "Download pages",
+              icon: "fa-download",
+              icon2: "file_download",
+              url: "images/pdf.rar",
+              name: "allPages.zip",
+              hideOnMobile:false
+            },
+            btnColor:'rgb(255,120,60)',
+            sideBtnColor:'rgb(255,120,60)',
+            sideBtnSize:60,
+            sideBtnBackground:"rgba(0,0,0,.7)",
+            sideBtnRadius:60,
+            btnSound:{vAlign:"top", hAlign:"left"},
+            btnAutoplay:{vAlign:"top", hAlign:"left"},
+            // SHARING
+            btnShare : {
+              enabled: true,
+              title: "Share",
+              icon: "fa-share-alt"
+            },
+            facebook : {
+              enabled: true,
+              url: "ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            },
+            google_plus : {
+              enabled: false
+            },
+            email : {
+              enabled: true,
+              url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf",
+              title: "PDF KPK",
+              description: "Silahkan click link di bawah untuk melihat / mengunduf pdf"
+            },
+            twitter : {
+              enabled: true,
+              url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            },
+            pinterest : {
+            enabled: true,
+            url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            }
+        });
+	$("#myBtn2").flipBook({
+            //Layout Setting
+            pdfUrl:'Copy of Blue simple clean easy science classroom poster.pdf',
+            lightBox:true,
+            layout:3,
+            currentPage:{vAlign:"bottom", hAlign:"left"},
+            // BTN SETTING
+            btnShare : {enabled:false},
+            btnPrint : {
+              hideOnMobile:true
+            },
+            btnDownloadPages : {
+              enabled: true,
+              title: "Download pages",
+              icon: "fa-download",
+              icon2: "file_download",
+              url: "images/pdf.rar",
+              name: "allPages.zip",
+              hideOnMobile:false
+            },
+            btnColor:'rgb(255,120,60)',
+            sideBtnColor:'rgb(255,120,60)',
+            sideBtnSize:60,
+            sideBtnBackground:"rgba(0,0,0,.7)",
+            sideBtnRadius:60,
+            btnSound:{vAlign:"top", hAlign:"left"},
+            btnAutoplay:{vAlign:"top", hAlign:"left"},
+            // SHARING
+            btnShare : {
+              enabled: true,
+              title: "Share",
+              icon: "fa-share-alt"
+            },
+            facebook : {
+              enabled: true,
+              url: "ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            },
+            google_plus : {
+              enabled: false
+            },
+            email : {
+              enabled: true,
+              url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf",
+              title: "PDF KPK",
+              description: "Silahkan click link di bawah untuk melihat / mengunduf pdf"
+            },
+            twitter : {
+              enabled: true,
+              url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            },
+            pinterest : {
+            enabled: true,
+            url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            }
+        });
+	$("#myBtn3").flipBook({
+            //Layout Setting
+            pdfUrl:'Copy of Copy of Blue simple clean easy science classroom poster.pdf',
+            lightBox:true,
+            layout:3,
+            currentPage:{vAlign:"bottom", hAlign:"left"},
+            // BTN SETTING
+            btnShare : {enabled:false},
+            btnPrint : {
+              hideOnMobile:true
+            },
+            
+            btnColor:'rgb(255,120,60)',
+            sideBtnColor:'rgb(255,120,60)',
+            sideBtnSize:60,
+            sideBtnBackground:"rgba(0,0,0,.7)",
+            sideBtnRadius:60,
+            btnSound:{vAlign:"top", hAlign:"left"},
+            btnAutoplay:{vAlign:"top", hAlign:"left"},
+            // SHARING
+            btnShare : {
+              enabled: true,
+              title: "Share",
+              icon: "fa-share-alt"
+            },
+            facebook : {
+              enabled: true,
+              url: "ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            },
+            google_plus : {
+              enabled: false
+            },
+            email : {
+              enabled: true,
+              url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf",
+              title: "PDF KPK",
+              description: "Silahkan click link di bawah untuk melihat / mengunduf pdf"
+            },
+            twitter : {
+              enabled: true,
+              url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            },
+            pinterest : {
+            enabled: true,
+            url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf"
+            }
+        });
+      })
+  </script>
 </head>
 <body style="background-image:url('img/bg.jpg');
 background-size:cover">
@@ -114,117 +284,7 @@ background-size:cover">
             </div>
         </div>
     </section>
-		<div id="myModal" class="modal">
-		  <!-- Modal content -->
-		  <div class="modal-content">
-		    <span class="close">&times;</span>
-		    <p>Some text in the Modal..</p>
-		  </div>
+	  
 
-		</div>
-
-		<script>
-		// Get the modal
-		var modal = document.getElementById("myModal");
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("myBtn");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() {
-		  modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		  modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		    modal.style.display = "none";
-		  }
-		}
-		</script>
-		<div id="myModal2" class="modal">
-		  <!-- Modal content -->
-		  <div class="modal-content">
-		    <span class="close">&times;</span>
-		    <p>Some text in the Modal..</p>
-		  </div>
-
-		</div>
-
-		<script>
-		// Get the modal
-		var modal = document.getElementById("myModal2");
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("myBtn2");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() {
-		  modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		  modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		    modal.style.display = "none";
-		  }
-		}
-		</script>
-			<div id="myModal3" class="modal">
-		  <!-- Modal content -->
-		  <div class="modal-content">
-		    <span class="close">&times;</span>
-		    <p>Some text in the Modal..</p>
-		  </div>
-
-		</div>
-
-		<script>
-		// Get the modal
-		var modal = document.getElementById("myModal3");
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("myBtn3");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() {
-		  modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		  modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		    modal.style.display = "none";
-		  }
-		}
-		</script>
-    <script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/plugin.js"></script>
-	<script src="js/init-round.js"></script>
-	<script src="js/main.js"></script>
 </body>
 </html>
