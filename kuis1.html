@@ -22,34 +22,70 @@ background-size:cover">
   <div class="tab-content">
     <div id="menu1" class="tab-pane fade in active">
       <h3>Praktikum</h3>
-      <form id="">
+      <form id="praktikum1" method="post">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">anggota kelompok</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"> silahkan masukkan nama kelompok</textarea>
+            <textarea class="form-control" id="namakelompok" name="namakelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap pendahuluan</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">tujuan</textarea>
+            <textarea class="form-control" id="tujuan" name="tujuan" rows="3">tujuan</textarea>
             <br>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">prediksi</textarea>
+            <textarea class="form-control" id="prediksi" name="prediksi" rows="3">prediksi</textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap praktikum</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">alat dan bahan</textarea>
+            <textarea class="form-control" id="alatdanbahan" name="alatdanbahan" rows="3">alat dan bahan</textarea>
             <br>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">langkah langkah</textarea>
+            <textarea class="form-control" id="langkahlangkah" name="langkahlangkah" rows="3">langkah langkah</textarea>
             <br>
-            <input type="file" class="form-control-file" id="exampleFormControlTextarea1" placeholder="silahan upload tabel di sini">
+            <input type="file" class="form-control-file" id="uploadtabel" name="uploadtabel" placeholder="silahan upload tabel di sini">
             <br>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">penjelasan pengamatan</textarea>
+            <textarea class="form-control" id="penjelasan" name="penjelasan" rows="3">penjelasan pengamatan</textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap penutup</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">analisis dari praktikum</textarea>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">kesimpulan nya</textarea>
+            <textarea class="form-control" id="analisis" name="analisis" rows="3">analisis dari praktikum</textarea>
+            <textarea class="form-control" id="kesimpulan" name="kesimpulan" rows="3">kesimpulan nya</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary" value="selesai">
+
       </form>
+      <script>
+        $( "#praktikum1" ).submit(function( event ) {
+          var namakelompok = $( "#namakelompok" ).val();
+          var tujuan = $( "#tujuan" ).val();
+          var prediksi = $( "#prediksi" ).val();
+          var alatdanbahan = $( "#alatdanbahan" ).val();
+          var langkahlangkah = $( "#langkahlangkah" ).val();
+          var uploadtabel = $( "#uploadtabel" ).val();
+          var penjelasan = $( "#penjelasan" ).val();
+          var analisis = $( "#analisis" ).val();
+          var kesimpulan = $( "#kesimpulan" ).val();
+          $.ajax({
+                url: 'https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f',
+                type: 'post',
+                data:{
+                              "nama_kelompok": namakelompok,
+                              "tujuan": tujuan,
+                              "prediksi": prediksi,
+                              "alat dan bahan ": alatdanbahan,
+                              "langkah": langkahlangkah,
+                              "tabel": tabel,
+                              "penjelasan": penjelasan,
+                              "analisis": analisis,
+                              "kesimpulan": kesimpulan
+                          },
+                headers: {
+                    "Content-Type": 'application/json'  //for object property name, use quoted notation shown in second
+                },
+                dataType: 'json',
+                success: function (data) {
+                    console.info(data);
+                }
+            });
+        });
+      </script>
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Soal 1</h3>
@@ -73,7 +109,7 @@ background-size:cover">
         <div class="form-group">
             <label for="exampleInputEmail1">Jelaskan konsep fisika umum yang terkait dengan
                 permasalahan diatas!</label>
-            <input type="text" name="jawaban3" id="jawaban2" class="form-control">
+            <input type="text" name="jawaban2" id="jawaban2" class="form-control">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Bagaimana hubungan antara gaya dan perpindahan</label>
@@ -94,5 +130,6 @@ background-size:cover">
     </div>
   </div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
+</html>
