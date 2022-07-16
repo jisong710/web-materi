@@ -25,7 +25,7 @@ background-size:cover">
       <form id="praktikum1" method="post" action="https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">anggota kelompok</label>
-            <textarea class="form-control" id="namakelompok" name="namakelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
+            <textarea class="form-control" id="namakelompok" name="nama_kelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap pendahuluan</label>
@@ -35,11 +35,11 @@ background-size:cover">
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap praktikum</label>
-            <textarea class="form-control" id="alatdanbahan" name="alatdanbahan" rows="3">alat dan bahan</textarea>
+            <textarea class="form-control" id="alatdanbahan" name="alat dan bahan" rows="3">alat dan bahan</textarea>
             <br>
-            <textarea class="form-control" id="langkahlangkah" name="langkahlangkah" rows="3">langkah langkah</textarea>
+            <textarea class="form-control" id="langkahlangkah" name="langkah" rows="3">langkah langkah</textarea>
             <br>
-            <input type="file" class="form-control-file" id="uploadtabel" name="uploadtabel" placeholder="silahan upload tabel di sini">
+            <input type="file" class="form-control-file" id="uploadtabel" name="tabel" placeholder="silahan upload tabel di sini">
             <br>
             <textarea class="form-control" id="penjelasan" name="penjelasan" rows="3">penjelasan pengamatan</textarea>
         </div>
@@ -53,38 +53,7 @@ background-size:cover">
       </form>
       <script>
         $( "#praktikum1" ).submit(function( event ) {
-          var namakelompok = $( "#namakelompok" ).val();
-          var tujuan = $( "#tujuan" ).val();
-          var prediksi = $( "#prediksi" ).val();
-          var alatdanbahan = $( "#alatdanbahan" ).val();
-          var langkahlangkah = $( "#langkahlangkah" ).val();
-          var uploadtabel = $( "#uploadtabel" ).val();
-          var penjelasan = $( "#penjelasan" ).val();
-          var analisis = $( "#analisis" ).val();
-          var kesimpulan = $( "#kesimpulan" ).val();
-          $.ajax({
-                url: 'https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f',
-                type: 'POST',
-                data:{
-                              "nama_kelompok": namakelompok,
-                              "tujuan": tujuan,
-                              "prediksi": prediksi,
-                              "alat dan bahan": alatdanbahan,
-                              "langkah": langkahlangkah,
-//                               "tabel": uploadtabel,
-                              "penjelasan": penjelasan,
-                              "analisis": analisis,
-                              "kesimpulan": kesimpulan
-                          },
-                headers: {
-                    "Content-Type": 'application/json',
-                       "X-Api-Key": 'TVA$aioURWN_YP4EUzDVt1Ba-@S4#a3_VRdH2BeBREwV5qwceW4S0_F0R3L2jlys'//for object property name, use quoted notation shown in second
-                },
-                dataType: 'JSON',
-                success: function (data) {
-                    console.info(data);
-                }
-            });
+          $(location).prop('href', 'https://jisong710.github.io/web-materi/daftarkuis.html')
         });
       </script>
     </div>
