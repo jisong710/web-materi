@@ -22,7 +22,7 @@ background-size:cover">
   <div class="tab-content">
     <div id="menu1" class="tab-pane fade in active">
       <h3>Praktikum</h3>
-      <form id="praktikum1" method="post" action="https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f">
+      <form id="praktikum1" method="post" action="https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f" onsubmit="window.location.replace("https://jisong710.github.io/web-materi/daftarkuis.html");">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">anggota kelompok</label>
             <textarea class="form-control" id="namakelompok" name="nama_kelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
@@ -35,7 +35,7 @@ background-size:cover">
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap praktikum</label>
-            <textarea class="form-control" id="alatdanbahan" name="alat dan bahan" rows="3">alat dan bahan</textarea>
+            <textarea class="form-control" id="alatdanbahan" name="alat_dan_bahan" rows="3">alat dan bahan</textarea>
             <br>
             <textarea class="form-control" id="langkahlangkah" name="langkah" rows="3">langkah langkah</textarea>
             <br>
@@ -51,11 +51,6 @@ background-size:cover">
         <input type="submit" class="btn btn-primary" value="selesai">
 
       </form>
-      <script>
-        $( "#praktikum1" ).submit(function( event ) {
-          $(location).prop('href', 'https://jisong710.github.io/web-materi/daftarkuis.html')
-        });
-      </script>
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Soal 1</h3>
