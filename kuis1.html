@@ -65,7 +65,7 @@ background-size:cover">
           $.ajax({
                 url: 'https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f',
                 type: 'POST',
-                data:JSON.Stringify({
+                data:{
                               "nama_kelompok": namakelompok,
                               "tujuan": tujuan,
                               "prediksi": prediksi,
@@ -75,7 +75,7 @@ background-size:cover">
                               "penjelasan": penjelasan,
                               "analisis": analisis,
                               "kesimpulan": kesimpulan
-                          }),
+                          },
                 headers: {
                     "Content-Type": 'application/json',
                        "X-Api-Key": 'TVA$aioURWN_YP4EUzDVt1Ba-@S4#a3_VRdH2BeBREwV5qwceW4S0_F0R3L2jlys'//for object property name, use quoted notation shown in second
