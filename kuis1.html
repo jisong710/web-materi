@@ -5,42 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="text/javascript">
-    $("#submitpraktikum").click( function() {
-      const namakelompok = $("#namakelompok").val();
-      const tujuan = $("#tujuan").val();
-      const prediksi = $("#prediksi").val();
-      const alatdanbahan = $("#alatdanbahan").val();
-      const langkahlangkah = $("#langkahlangkah").val();
-      // const uploadtabel = $("#uploadtabel").val();
-      const penjelasan = $("#penjelasan").val();
-      const analisis = $("#analisis").val();
-      const kesimpulan = $("#kesimpulan").val();
-      $.ajax({
-            async: false,
-            url: "https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f",
-            type: "post",
-            data:{
-                          "nama_kelompok": namakelompok,
-                          "tujuan": tujuan,
-                          "prediksi": prediksi,
-                          "alat_dan_bahan ": alatdanbahan,
-                          "langkah": langkahlangkah,
-                          // "tabel": uploadtabel,
-                          "penjelasan": penjelasan,
-                          "analisis": analisis,
-                          "kesimpulan": kesimpulan
-                      },
-            headers: {
-                "content-type": "application/json"  //for object property name, use quoted notation shown in second
-            },
-            success: function (data) {
-                alert(data);
-            }
-        });
-    });
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body style="background-image:url('img/bg.jpg');
@@ -57,10 +22,10 @@ background-size:cover">
   <div class="tab-content">
     <div id="menu1" class="tab-pane fade in active">
       <h3>Praktikum</h3>
-      <form id="praktikum" method="post" action="kuis1.html">
+      <form id="praktikum1" method="post" action="https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f" onsubmit="alert("selesai");">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">anggota kelompok</label>
-            <textarea class="form-control" id="namakelompok" name="namakelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
+            <textarea class="form-control" id="namakelompok" name="nama_kelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap pendahuluan</label>
@@ -70,23 +35,22 @@ background-size:cover">
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap praktikum</label>
-            <textarea class="form-control" id="alatdanbahan" name="alatdanbahan" rows="3">alat dan bahan</textarea>
+            <textarea class="form-control" id="alatdanbahan" name="alat_dan_bahan" rows="3">alat dan bahan</textarea>
             <br>
-            <textarea class="form-control" id="langkahlangkah" name="langkahlangkah" rows="3">langkah langkah</textarea>
+            <textarea class="form-control" id="langkahlangkah" name="langkah" rows="3">langkah langkah</textarea>
             <br>
-            <input type="file" class="form-control-file" id="uploadtabel" name="uploadtabel" placeholder="silahan upload tabel di sini">
+            <input type="file" class="form-control-file" id="uploadtabel" name="tabel" placeholder="silahan upload tabel di sini">
             <br>
             <textarea class="form-control" id="penjelasan" name="penjelasan" rows="3">penjelasan pengamatan</textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap penutup</label>
             <textarea class="form-control" id="analisis" name="analisis" rows="3">analisis dari praktikum</textarea>
+            <br>
             <textarea class="form-control" id="kesimpulan" name="kesimpulan" rows="3">kesimpulan nya</textarea>
         </div>
-        <button class="btn btn-primary" id="submitpraktikum" value="selesai">submit</button>
-
+        <input type="submit" class="btn btn-primary" value="selesai">
       </form>
-     
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Soal 1</h3>
@@ -131,5 +95,6 @@ background-size:cover">
     </div>
   </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
