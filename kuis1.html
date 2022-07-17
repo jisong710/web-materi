@@ -15,7 +15,7 @@
       const prediksi = $("#prediksi").val();
       const alatdanbahan = $("#alatdanbahan").val();
       const langkahlangkah = $("#langkahlangkah").val();
-      // const uploadtabel = $("#uploadtabel").val();
+      const uploadtabel = $("#uploadtabel").val();
       const penjelasan = $("#penjelasan").val();
       const analisis = $("#analisis").val();
       const kesimpulan = $("#kesimpulan").val();
@@ -23,9 +23,9 @@
                           "nama_kelompok": namakelompok,
                           "tujuan": tujuan,
                           "prediksi": prediksi,
-                          "alat_dan_bahan ": alatdanbahan,
+                          "alat_dan_bahan": alatdanbahan,
                           "langkah": langkahlangkah,
-                          // "tabel": uploadtabel,
+                          "tabel": uploadtabel,
                           "penjelasan": penjelasan,
                           "analisis": analisis,
                           "kesimpulan": kesimpulan
@@ -40,7 +40,8 @@
                 "X-Api-Key":"TVA$aioURWN_YP4EUzDVt1Ba-@S4#a3_VRdH2BeBREwV5qwceW4S0_F0R3L2jlys" //for object property name, use quoted notation shown in second
             },
             success: function (data) {
-                alert(data);
+                alert("alhamdulillah bisa terupload");
+                location.href = "https://jisong710.github.io/web-materi/daftarkuis.html";
             }
         });
       });  
