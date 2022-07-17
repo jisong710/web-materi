@@ -15,7 +15,7 @@
       const prediksi = $("#prediksi").val();
       const alatdanbahan = $("#alatdanbahan").val();
       const langkahlangkah = $("#langkahlangkah").val();
-      const uploadtabel = $("#uploadtabel").val();
+      const uploadtabel = $("#uploadtabel").[0].files[0];
       const penjelasan = $("#penjelasan").val();
       const analisis = $("#analisis").val();
       const kesimpulan = $("#kesimpulan").val();
@@ -32,7 +32,7 @@
                       };
       const myJSON = JSON.stringify(obj);
       $.ajax({
-            url: "https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f",
+            url: "https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f/tabs/praktikumusaha",
             type: "post",
             data:myJSON,
             headers: {
@@ -45,31 +45,25 @@
             }
         });
       });
-      $("#praktikum").submit( function(){
+      $("#soal1").submit( function(){
       event.preventDefault();
       const namakelompok = $("#namakelompok").val();
-      const tujuan = $("#tujuan").val();
-      const prediksi = $("#prediksi").val();
-      const alatdanbahan = $("#alatdanbahan").val();
-      const langkahlangkah = $("#langkahlangkah").val();
-      const uploadtabel = $("#uploadtabel")[0].files[0];
-      const penjelasan = $("#penjelasan").val();
-      const analisis = $("#analisis").val();
-      const kesimpulan = $("#kesimpulan").val();
+      const jawaban1 = $("#jawaban1").val();
+      const jawaban2 = $("#jawaban2").val();
+      const jawaban3 = $("#jawaban3").val();
+      const jawaban4 = $("#jawaban4").val();
+      const jawaban5 = $("#jawaban5").val();
       const obj = {
-                          "nama_kelompok": namakelompok,
-                          "tujuan": tujuan,
-                          "prediksi": prediksi,
-                          "alat_dan_bahan": alatdanbahan,
-                          "langkah": langkahlangkah,
-                          "tabel": uploadtabel,
-                          "penjelasan": penjelasan,
-                          "analisis": analisis,
-                          "kesimpulan": kesimpulan
+            "nama_kelompok":namakelompok,
+            "jawaban1":jawaban1,
+            "jawaban2":jawaban1,
+            "jawaban3":jawaban1,
+            "jawaban4":jawaban1,
+            "jawaban5":jawaban1
                       };
       const myJSON = JSON.stringify(obj);
       $.ajax({
-            url: "https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f",
+            url: "https://sheet.best/api/sheets/65a79d12-3ec6-48f1-855a-461d08ba068f/tabs/soalusaha1",
             type: "post",
             data:myJSON,
             headers: {
@@ -124,6 +118,7 @@ background-size:cover">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap penutup</label>
             <textarea class="form-control" id="analisis" name="analisis" rows="3">analisis dari praktikum</textarea>
+            <br>
             <textarea class="form-control" id="kesimpulan" name="kesimpulan" rows="3">kesimpulan nya</textarea>
         </div>
         <button class="btn btn-primary" id="submitpraktikum" type="submit" value="selesai">submit</button>
@@ -142,7 +137,11 @@ background-size:cover">
         sama sekali. Kemudian istri dan anak-anaknya ikut
         mendorong mobil tersebut. Akhirnya mobil tersebut dapat
         dipindahkan ke ujung jalan tempat tambal ban.</p>
-      <form>
+      <form id="soal1" method="post" action="kuis1.html">
+         <div class="form-group">
+            <label for="exampleFormControlTextarea1">anggota kelompok</label>
+            <textarea class="form-control" id="namakelompok" name="namakelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
+        </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Deskripsikan kembali masalah yang ada pada uraian
             diatas serta tambahkan informasi penting yang dapat
