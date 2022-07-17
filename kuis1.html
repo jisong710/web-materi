@@ -8,7 +8,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript">
     $(document).ready( function() {
-      $("#praktikum").on("submit", function(){
+      $("#praktikum").submit( function(){
+      event.preventDefault();
       const namakelompok = $("#namakelompok").val();
       const tujuan = $("#tujuan").val();
       const prediksi = $("#prediksi").val();
