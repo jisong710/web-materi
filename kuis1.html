@@ -45,6 +45,10 @@
             }
         });
       });
+    });
+  </script>
+  <script>
+    $(document).ready( function{
       $("#soal1").submit( function(){
       event.preventDefault();
       const namakelompok = $("#namakelompok").val();
@@ -56,10 +60,10 @@
       const obj = {
             "nama_kelompok":namakelompok,
             "jawaban1":jawaban1,
-            "jawaban2":jawaban1,
-            "jawaban3":jawaban1,
-            "jawaban4":jawaban1,
-            "jawaban5":jawaban1
+            "jawaban2":jawaban2,
+            "jawaban3":jawaban3,
+            "jawaban4":jawaban4,
+            "jawaban5":jawaban5
                       };
       const myJSON = JSON.stringify(obj);
       $.ajax({
