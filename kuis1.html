@@ -15,7 +15,7 @@
       const prediksi = $("#prediksi").val();
       const alatdanbahan = $("#alatdanbahan").val();
       const langkahlangkah = $("#langkahlangkah").val();
-      const uploadtabel = $("#uploadtabel").[0].files[0];
+      const uploadtabel = $("#uploadtabel").files[0];
       const penjelasan = $("#penjelasan").val();
       const analisis = $("#analisis").val();
       const kesimpulan = $("#kesimpulan").val();
@@ -45,10 +45,6 @@
             }
         });
       });
-    });
-  </script>
-  <script>
-    $(document).ready( function{
       $("#soal1").submit( function(){
       event.preventDefault();
       const namakelompok = $("#namakelompok").val();
