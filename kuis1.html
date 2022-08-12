@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript">
-    $(document).ready( function() {
+$(document).ready( function() {
       $("#praktikum").submit( function(){
       event.preventDefault();
       const namakelompok = $("#namakelompok").val();
@@ -19,6 +19,9 @@
       const penjelasan = $("#penjelasan").val();
       const analisis = $("#analisis").val();
       const kesimpulan = $("#kesimpulan").val();
+      const motivasi = $("#motivasi").val();
+      const apresiasi = $("#apresiasi").val();
+      const refleksi = $("#refleksi").val();
       const obj = {
                           "nama_kelompok": namakelompok,
                           "tujuan": tujuan,
@@ -28,7 +31,10 @@
                           "tabel": uploadtabel,
                           "penjelasan": penjelasan,
                           "analisis": analisis,
-                          "kesimpulan": kesimpulan
+                          "kesimpulan": kesimpulan,
+                          "motivasi": motivasi,
+                          "apresiasi": analisis,
+                          "refleksi": refleksi
                       };
       const myJSON = JSON.stringify(obj);
       $.ajax({
@@ -96,31 +102,37 @@ background-size:cover">
       <h3>Praktikum</h3>
       <form id="praktikum" method="post" action="kuis1.html">
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">anggota kelompok</label>
-            <textarea class="form-control" id="namakelompok" name="namakelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">tahap pendahuluan</label>
-            <textarea class="form-control" id="tujuan" name="tujuan" rows="3">tujuan</textarea>
-            <br>
-            <textarea class="form-control" id="prediksi" name="prediksi" rows="3">prediksi</textarea>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">tahap praktikum</label>
-            <textarea class="form-control" id="alatdanbahan" name="alatdanbahan" rows="3">alat dan bahan</textarea>
-            <br>
-            <textarea class="form-control" id="langkahlangkah" name="langkahlangkah" rows="3">langkah langkah</textarea>
-            <br>
-            <input type="file" class="form-control-file" id="uploadtabel" name="uploadtabel" placeholder="silahan upload tabel di sini">
-            <br>
-            <textarea class="form-control" id="penjelasan" name="penjelasan" rows="3">penjelasan pengamatan</textarea>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">tahap penutup</label>
-            <textarea class="form-control" id="analisis" name="analisis" rows="3">analisis dari praktikum</textarea>
-            <br>
-            <textarea class="form-control" id="kesimpulan" name="kesimpulan" rows="3">kesimpulan nya</textarea>
-        </div>
+          <label for="exampleFormControlTextarea1">anggota kelompok</label>
+          <textarea class="form-control" id="namakelompok" name="namakelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
+          <br>
+          <textarea class="form-control" id="motivasi" name="motivasi" rows="3">apa motivasi mu mengerjakan ini</textarea>
+          <br>
+          <textarea class="form-control" id="apresiasi" name="apresiasi" rows="3">bagaimana penilaian anda</textarea>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1">tahap pendahuluan</label>
+          <textarea class="form-control" id="tujuan" name="tujuan" rows="3">tujuan</textarea>
+          <br>
+          <textarea class="form-control" id="prediksi" name="prediksi" rows="3">prediksi</textarea>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1">tahap praktikum</label>
+          <textarea class="form-control" id="alatdanbahan" name="alatdanbahan" rows="3">alat dan bahan</textarea>
+          <br>
+          <textarea class="form-control" id="langkahlangkah" name="langkahlangkah" rows="3">langkah langkah</textarea>
+          <br>
+          <input type="file" class="form-control-file" id="uploadtabel" name="uploadtabel" placeholder="silahan upload tabel di sini">
+          <br>
+          <textarea class="form-control" id="penjelasan" name="penjelasan" rows="3">penjelasan pengamatan</textarea>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1">tahap penutup</label>
+          <textarea class="form-control" id="analisis" name="analisis" rows="3">analisis dari praktikum</textarea>
+          <br>
+          <textarea class="form-control" id="kesimpulan" name="kesimpulan" rows="3">kesimpulan nya</textarea>
+          <br>
+          <textarea class="form-control" id="refleksi" name="refleksi" rows="3">refleksi</textarea>
+      </div>
         <button class="btn btn-primary" id="submitpraktikum" type="submit" value="selesai">submit</button>
       </form>
      

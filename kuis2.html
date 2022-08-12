@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript">
-    $(document).ready( function() {
+$(document).ready( function() {
       $("#praktikum").submit( function(){
       event.preventDefault();
       const namakelompok = $("#namakelompok").val();
@@ -19,6 +19,9 @@
       const penjelasan = $("#penjelasan").val();
       const analisis = $("#analisis").val();
       const kesimpulan = $("#kesimpulan").val();
+      const motivasi = $("#motivasi").val();
+      const apresiasi = $("#apresiasi").val();
+      const refleksi = $("#refleksi").val();
       const obj = {
                           "nama_kelompok": namakelompok,
                           "tujuan": tujuan,
@@ -28,7 +31,10 @@
                           "tabel": uploadtabel,
                           "penjelasan": penjelasan,
                           "analisis": analisis,
-                          "kesimpulan": kesimpulan
+                          "kesimpulan": kesimpulan,
+                          "motivasi": motivasi,
+                          "apresiasi": analisis,
+                          "refleksi": refleksi
                       };
       const myJSON = JSON.stringify(obj);
       $.ajax({
@@ -98,6 +104,10 @@ background-size:cover">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">anggota kelompok</label>
             <textarea class="form-control" id="namakelompok" name="namakelompok" rows="3"> silahkan masukkan nama kelompok</textarea>
+            <br>
+            <textarea class="form-control" id="motivasi" name="motivasi" rows="3">apa motivasi mu mengerjakan ini</textarea>
+            <br>
+            <textarea class="form-control" id="apresiasi" name="apresiasi" rows="3">bagaimana penilaian anda</textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">tahap pendahuluan</label>
@@ -120,6 +130,8 @@ background-size:cover">
             <textarea class="form-control" id="analisis" name="analisis" rows="3">analisis dari praktikum</textarea>
             <br>
             <textarea class="form-control" id="kesimpulan" name="kesimpulan" rows="3">kesimpulan nya</textarea>
+            <br>
+            <textarea class="form-control" id="refleksi" name="refleksi" rows="3">refleksi</textarea>
         </div>
         <button class="btn btn-primary" id="submitpraktikum" type="submit" value="selesai">submit</button>
       </form>
